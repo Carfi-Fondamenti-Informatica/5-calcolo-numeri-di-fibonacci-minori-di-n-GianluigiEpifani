@@ -1,23 +1,20 @@
 #include <iostream>
 using namespace std;
 
-
 int main() {
-    bool flag = true;
-    int n=0;
-    int fibonacci_p= 1, fibonacci=1;
-
+    int a=1,b=1,c=0,n=0;
     cin >> n;
-
-    while(fibonacci <= n){
-        if(flag){
-            flag = false;
-            cout << fibonacci_p <<endl;
-        }else {
-            cout << fibonacci << endl;
-            int temp = fibonacci;
-            fibonacci += fibonacci_p;
-            fibonacci_p = temp;
+    if(n>0){
+        cout << a << endl;
+        cout << b << endl;
+        c=a+b;
+        a=b;
+        b=c;
+        while(c<=n){
+            cout << c <<endl;
+            c=a+b;
+            a=b;
+            b=c;
         }
     }
     return 0;
